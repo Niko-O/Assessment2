@@ -1,0 +1,147 @@
+﻿
+body
+{
+    /*noinspection CssUnknownTarget*/
+    background: url("/Content/img/2gaydNB.png");
+}
+
+#MainContent
+{
+    margin-top: 50px;
+}
+
+#Footer
+{
+    border: 1px solid black;
+    position: fixed;
+    bottom: 0;
+}
+
+.CenteredDivOuter
+{
+    text-align: center;
+}
+
+.CenteredDivInner
+{
+    display: inline-block;
+    text-align: left;
+}
+
+.SimpleBlackBorder
+{
+    border: 1px solid black;
+}
+
+.SimpleBlackTableBorder
+{
+    border-spacing: 0;
+}
+
+.SimpleBlackTableBorder tr th
+{
+    border: 1px solid black;
+}
+
+.SimpleBlackTableBorder tr td
+{
+    border: 1px solid black;
+}
+
+.SiteMap
+{
+    display: inline-block;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.UserArea
+{
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 5px 10px 5px 10px;
+}
+
+.UserArea.ErrorMessage
+{
+    word-wrap: break-word;
+}
+
+.ErrorMessage
+{
+    color: #B00;
+}
+
+.DebugMessage
+{
+    color: #05F;
+}
+
+.MainTitle
+{
+    font-size: 32px;
+}
+
+.pure-menu-link
+{
+    color: #333;
+}
+
+.Panel
+{
+    padding: 5px 10px 5px 10px;
+    background-color: rgba(180, 180, 180, 0.6);
+}
+
+.BorderedPanel
+{
+    margin: 5px;
+}
+
+.RegisterPageContent
+{
+    padding: 5px 10px 5px 10px;
+    max-width: 35em;
+}
+
+.EditUserSettingsPageContent
+{
+    padding: 5px 10px 5px 10px;
+    max-width: 35em;
+}
+
+/*.VerticalTableHeader thead tr th
+{
+    text-align:center;
+    white-space:nowrap;
+    transform-origin:50% 50%;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+.VerticalTableHeader thead tr th:before {
+    content:'';
+    padding-top:110%;/* takes width as reference, + 10% for faking some extra padding
+    display:inline-block;
+    vertical-align:middle;
+}*/
+
+.VerticalTableHeader thead tr th
+{
+    white-space: nowrap;
+    transform-origin: 130px 125px;
+    transform: rotate(270deg);
+}
+
+.VerticalTableHeader thead tr th span
+{
+    display: inline-block;
+    width: 10px;
+    height: 230px;
+}

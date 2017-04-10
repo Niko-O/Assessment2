@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BrisDataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="BrisDataEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Banana" EntityType="BrisDataModel.Banana" />
+    <EntitySet Name="BananaConsumption" EntityType="BrisDataModel.BananaConsumption" />
+    <EntitySet Name="Manufacturer" EntityType="BrisDataModel.Manufacturer" />
+    <EntitySet Name="RegistrationProcess" EntityType="BrisDataModel.RegistrationProcess" />
+    <EntitySet Name="Role" EntityType="BrisDataModel.Role" />
+    <EntitySet Name="RolePermission" EntityType="BrisDataModel.RolePermission" />
+    <EntitySet Name="User" EntityType="BrisDataModel.User" />
+    <AssociationSet Name="FK_Banana_Manufacturer" Association="BrisDataModel.FK_Banana_Manufacturer">
+      <End Role="Manufacturer" EntitySet="Manufacturer" />
+      <End Role="Banana" EntitySet="Banana" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Banana_User" Association="BrisDataModel.FK_Banana_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Banana" EntitySet="Banana" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BananaConsumption_Banana" Association="BrisDataModel.FK_BananaConsumption_Banana">
+      <End Role="Banana" EntitySet="Banana" />
+      <End Role="BananaConsumption" EntitySet="BananaConsumption" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BananaConsumption_User" Association="BrisDataModel.FK_BananaConsumption_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="BananaConsumption" EntitySet="BananaConsumption" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistrationProcess_User" Association="BrisDataModel.FK_RegistrationProcess_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="RegistrationProcess" EntitySet="RegistrationProcess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RolePermission_Role" Association="BrisDataModel.FK_RolePermission_Role">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="RolePermission" EntitySet="RolePermission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Role" Association="BrisDataModel.FK_User_Role">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Banana">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="FK_Manufacturer" Type="Guid" Nullable="false" />
+    <Property Name="Radiation" Type="Int32" Nullable="false" />
+    <Property Name="FK_CreatedBy" Type="Guid" />
+    <Property Name="Barcode" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Manufacturer" Relationship="BrisDataModel.FK_Banana_Manufacturer" FromRole="Banana" ToRole="Manufacturer" />
+    <NavigationProperty Name="User" Relationship="BrisDataModel.FK_Banana_User" FromRole="Banana" ToRole="User" />
+    <NavigationProperty Name="BananaConsumption" Relationship="BrisDataModel.FK_BananaConsumption_Banana" FromRole="Banana" ToRole="BananaConsumption" />
+  </EntityType>
+  <EntityType Name="BananaConsumption">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="FK_User" Type="Guid" Nullable="false" />
+    <Property Name="FK_Banana" Type="Guid" Nullable="false" />
+    <Property Name="Amount" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Banana" Relationship="BrisDataModel.FK_BananaConsumption_Banana" FromRole="BananaConsumption" ToRole="Banana" />
+    <NavigationProperty Name="User" Relationship="BrisDataModel.FK_BananaConsumption_User" FromRole="BananaConsumption" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Manufacturer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Banana" Relationship="BrisDataModel.FK_Banana_Manufacturer" FromRole="Manufacturer" ToRole="Banana" />
+  </EntityType>
+  <EntityType Name="RegistrationProcess">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="FK_User" Type="Guid" Nullable="false" />
+    <Property Name="RandomValue" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="UniqueValue" Type="Guid" Nullable="false" />
+    <Property Name="ExpirationDateTime" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="BrisDataModel.FK_RegistrationProcess_User" FromRole="RegistrationProcess" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="RolePermission" Relationship="BrisDataModel.FK_RolePermission_Role" FromRole="Role" ToRole="RolePermission" />
+    <NavigationProperty Name="User" Relationship="BrisDataModel.FK_User_Role" FromRole="Role" ToRole="User" />
+  </EntityType>
+  <EntityType Name="RolePermission">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="FK_Role" Type="Guid" Nullable="false" />
+    <Property Name="Permission" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Role" Relationship="BrisDataModel.FK_RolePermission_Role" FromRole="RolePermission" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordHash" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="FK_Role" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Banana" Relationship="BrisDataModel.FK_Banana_User" FromRole="User" ToRole="Banana" />
+    <NavigationProperty Name="BananaConsumption" Relationship="BrisDataModel.FK_BananaConsumption_User" FromRole="User" ToRole="BananaConsumption" />
+    <NavigationProperty Name="RegistrationProcess" Relationship="BrisDataModel.FK_RegistrationProcess_User" FromRole="User" ToRole="RegistrationProcess" />
+    <NavigationProperty Name="Role" Relationship="BrisDataModel.FK_User_Role" FromRole="User" ToRole="Role" />
+  </EntityType>
+  <Association Name="FK_Banana_Manufacturer">
+    <End Role="Manufacturer" Type="BrisDataModel.Manufacturer" Multiplicity="1" />
+    <End Role="Banana" Type="BrisDataModel.Banana" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Banana">
+        <PropertyRef Name="FK_Manufacturer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Banana_User">
+    <End Role="User" Type="BrisDataModel.User" Multiplicity="1" />
+    <End Role="Banana" Type="BrisDataModel.Banana" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Banana">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BananaConsumption_Banana">
+    <End Role="Banana" Type="BrisDataModel.Banana" Multiplicity="1" />
+    <End Role="BananaConsumption" Type="BrisDataModel.BananaConsumption" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Banana">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BananaConsumption">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BananaConsumption_User">
+    <End Role="User" Type="BrisDataModel.User" Multiplicity="1" />
+    <End Role="BananaConsumption" Type="BrisDataModel.BananaConsumption" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BananaConsumption">
+        <PropertyRef Name="FK_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistrationProcess_User">
+    <End Role="User" Type="BrisDataModel.User" Multiplicity="1" />
+    <End Role="RegistrationProcess" Type="BrisDataModel.RegistrationProcess" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RegistrationProcess">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RolePermission_Role">
+    <End Role="Role" Type="BrisDataModel.Role" Multiplicity="1" />
+    <End Role="RolePermission" Type="BrisDataModel.RolePermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RolePermission">
+        <PropertyRef Name="FK_Role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Role">
+    <End Role="Role" Type="BrisDataModel.Role" Multiplicity="1" />
+    <End Role="User" Type="BrisDataModel.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="FK_Role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

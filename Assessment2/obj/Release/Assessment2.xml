@@ -1,0 +1,368 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Assessment2
+</name>
+</assembly>
+<members>
+<member name="M:Assessment2.Models.BrisDataEntities.#ctor">
+	<summary>
+ Initialisiert ein neues BrisDataEntities-Objekt mithilfe der in Abschnitt 'BrisDataEntities' der Anwendungskonfigurationsdatei gefundenen Verbindungszeichenfolge.
+ </summary>
+</member><member name="M:Assessment2.Models.BrisDataEntities.#ctor(System.String)">
+	<summary>
+ Initialisiert ein neues BrisDataEntities-Objekt.
+ </summary>
+</member><member name="M:Assessment2.Models.BrisDataEntities.#ctor(System.Data.EntityClient.EntityConnection)">
+	<summary>
+ Initialisiert ein neues BrisDataEntities-Objekt.
+ </summary>
+</member><member name="P:Assessment2.Models.BrisDataEntities.Banana">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.BrisDataEntities.BananaConsumption">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.BrisDataEntities.Manufacturer">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.BrisDataEntities.RegistrationProcess">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.BrisDataEntities.Role">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.BrisDataEntities.RolePermission">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.BrisDataEntities.User">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="M:Assessment2.Models.BrisDataEntities.AddToBanana(Assessment2.Models.Banana)">
+	<summary>
+ Veraltete Methode zum Hinzufügen eines neuen Objekts zum EntitySet 'Banana'. Verwenden Sie stattdessen die Methode '.Add' der zugeordneten Eigenschaft 'ObjectSet(Of T) '.
+ </summary>
+</member><member name="M:Assessment2.Models.BrisDataEntities.AddToBananaConsumption(Assessment2.Models.BananaConsumption)">
+	<summary>
+ Veraltete Methode zum Hinzufügen eines neuen Objekts zum EntitySet 'BananaConsumption'. Verwenden Sie stattdessen die Methode '.Add' der zugeordneten Eigenschaft 'ObjectSet(Of T) '.
+ </summary>
+</member><member name="M:Assessment2.Models.BrisDataEntities.AddToManufacturer(Assessment2.Models.Manufacturer)">
+	<summary>
+ Veraltete Methode zum Hinzufügen eines neuen Objekts zum EntitySet 'Manufacturer'. Verwenden Sie stattdessen die Methode '.Add' der zugeordneten Eigenschaft 'ObjectSet(Of T) '.
+ </summary>
+</member><member name="M:Assessment2.Models.BrisDataEntities.AddToRegistrationProcess(Assessment2.Models.RegistrationProcess)">
+	<summary>
+ Veraltete Methode zum Hinzufügen eines neuen Objekts zum EntitySet 'RegistrationProcess'. Verwenden Sie stattdessen die Methode '.Add' der zugeordneten Eigenschaft 'ObjectSet(Of T) '.
+ </summary>
+</member><member name="M:Assessment2.Models.BrisDataEntities.AddToRole(Assessment2.Models.Role)">
+	<summary>
+ Veraltete Methode zum Hinzufügen eines neuen Objekts zum EntitySet 'Role'. Verwenden Sie stattdessen die Methode '.Add' der zugeordneten Eigenschaft 'ObjectSet(Of T) '.
+ </summary>
+</member><member name="M:Assessment2.Models.BrisDataEntities.AddToRolePermission(Assessment2.Models.RolePermission)">
+	<summary>
+ Veraltete Methode zum Hinzufügen eines neuen Objekts zum EntitySet 'RolePermission'. Verwenden Sie stattdessen die Methode '.Add' der zugeordneten Eigenschaft 'ObjectSet(Of T) '.
+ </summary>
+</member><member name="M:Assessment2.Models.BrisDataEntities.AddToUser(Assessment2.Models.User)">
+	<summary>
+ Veraltete Methode zum Hinzufügen eines neuen Objekts zum EntitySet 'User'. Verwenden Sie stattdessen die Methode '.Add' der zugeordneten Eigenschaft 'ObjectSet(Of T) '.
+ </summary>
+</member><member name="T:Assessment2.Models.BrisDataEntities">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="M:Assessment2.Models.Banana.CreateBanana(System.Guid,System.String,System.Guid,System.Int32)">
+	<summary>
+ Erstellt ein neues Banana-Objekt.
+ </summary>
+	<param name="id">Anfangswert der Eigenschaft Id.</param>
+	<param name="name">Anfangswert der Eigenschaft Name.</param>
+	<param name="fK_Manufacturer">Anfangswert der Eigenschaft FK_Manufacturer.</param>
+	<param name="radiation">Anfangswert der Eigenschaft Radiation.</param>
+</member><member name="P:Assessment2.Models.Banana.Id">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.Banana.Name">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.Banana.FK_Manufacturer">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.Banana.Radiation">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.Banana.FK_CreatedBy">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.Banana.Barcode">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.Banana.Manufacturer">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.Banana.ManufacturerReference">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.Banana.User">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.Banana.UserReference">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.Banana.BananaConsumption">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.Banana.BananaConsumptionReference">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="T:Assessment2.Models.Banana">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="M:Assessment2.Models.BananaConsumption.CreateBananaConsumption(System.Guid,System.Guid,System.Guid,System.Int32)">
+	<summary>
+ Erstellt ein neues BananaConsumption-Objekt.
+ </summary>
+	<param name="id">Anfangswert der Eigenschaft Id.</param>
+	<param name="fK_User">Anfangswert der Eigenschaft FK_User.</param>
+	<param name="fK_Banana">Anfangswert der Eigenschaft FK_Banana.</param>
+	<param name="amount">Anfangswert der Eigenschaft Amount.</param>
+</member><member name="P:Assessment2.Models.BananaConsumption.Id">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.BananaConsumption.FK_User">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.BananaConsumption.FK_Banana">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.BananaConsumption.Amount">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.BananaConsumption.Banana">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.BananaConsumption.BananaReference">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.BananaConsumption.User">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.BananaConsumption.UserReference">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="T:Assessment2.Models.BananaConsumption">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="M:Assessment2.Models.Manufacturer.CreateManufacturer(System.Guid,System.String)">
+	<summary>
+ Erstellt ein neues Manufacturer-Objekt.
+ </summary>
+	<param name="id">Anfangswert der Eigenschaft Id.</param>
+	<param name="name">Anfangswert der Eigenschaft Name.</param>
+</member><member name="P:Assessment2.Models.Manufacturer.Id">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.Manufacturer.Name">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.Manufacturer.Banana">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="T:Assessment2.Models.Manufacturer">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="M:Assessment2.Models.RegistrationProcess.CreateRegistrationProcess(System.Guid,System.Guid,System.Byte[],System.Guid,System.DateTime)">
+	<summary>
+ Erstellt ein neues RegistrationProcess-Objekt.
+ </summary>
+	<param name="id">Anfangswert der Eigenschaft Id.</param>
+	<param name="fK_User">Anfangswert der Eigenschaft FK_User.</param>
+	<param name="randomValue">Anfangswert der Eigenschaft RandomValue.</param>
+	<param name="uniqueValue">Anfangswert der Eigenschaft UniqueValue.</param>
+	<param name="expirationDateTime">Anfangswert der Eigenschaft ExpirationDateTime.</param>
+</member><member name="P:Assessment2.Models.RegistrationProcess.Id">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.RegistrationProcess.FK_User">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.RegistrationProcess.RandomValue">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.RegistrationProcess.UniqueValue">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.RegistrationProcess.ExpirationDateTime">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.RegistrationProcess.User">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.RegistrationProcess.UserReference">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="T:Assessment2.Models.RegistrationProcess">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="M:Assessment2.Models.Role.CreateRole(System.Guid,System.String)">
+	<summary>
+ Erstellt ein neues Role-Objekt.
+ </summary>
+	<param name="id">Anfangswert der Eigenschaft Id.</param>
+	<param name="name">Anfangswert der Eigenschaft Name.</param>
+</member><member name="P:Assessment2.Models.Role.Id">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.Role.Name">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.Role.RolePermission">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.Role.User">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="T:Assessment2.Models.Role">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="M:Assessment2.Models.RolePermission.CreateRolePermission(System.Guid,System.Guid,System.Int32)">
+	<summary>
+ Erstellt ein neues RolePermission-Objekt.
+ </summary>
+	<param name="id">Anfangswert der Eigenschaft Id.</param>
+	<param name="fK_Role">Anfangswert der Eigenschaft FK_Role.</param>
+	<param name="permission">Anfangswert der Eigenschaft Permission.</param>
+</member><member name="P:Assessment2.Models.RolePermission.Id">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.RolePermission.FK_Role">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.RolePermission.Permission">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.RolePermission.Role">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.RolePermission.RoleReference">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="T:Assessment2.Models.RolePermission">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="M:Assessment2.Models.User.CreateUser(System.Guid,System.String,System.String,System.String,System.Guid)">
+	<summary>
+ Erstellt ein neues User-Objekt.
+ </summary>
+	<param name="id">Anfangswert der Eigenschaft Id.</param>
+	<param name="name">Anfangswert der Eigenschaft Name.</param>
+	<param name="email">Anfangswert der Eigenschaft Email.</param>
+	<param name="passwordHash">Anfangswert der Eigenschaft PasswordHash.</param>
+	<param name="fK_Role">Anfangswert der Eigenschaft FK_Role.</param>
+</member><member name="P:Assessment2.Models.User.Id">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.User.Name">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.User.Email">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.User.PasswordHash">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.User.FK_Role">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.User.Banana">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.User.BananaReference">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.User.BananaConsumption">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.User.RegistrationProcess">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.User.RegistrationProcessReference">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.User.Role">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="P:Assessment2.Models.User.RoleReference">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member><member name="T:Assessment2.Models.User">
+	<summary>
+ Keine Dokumentation für Metadaten verfügbar.
+ </summary>
+</member>
+</members>
+</doc>
